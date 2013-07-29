@@ -12,7 +12,7 @@ import java.net.*;
 
 public class DownloadService extends Service
 {
-	private final String HTTP_URL = "http://118.169.189.207/music/01.mp3";
+	private final String HTTP_URL = "http://104.126.11.163:8080/test.html";
 	
 	@Override
 	public void onCreate() {
@@ -58,8 +58,7 @@ public class DownloadService extends Service
 				urlConn.setDoInput(true);
 				urlConn.setConnectTimeout(10000);
 				InputStream is = urlConn.getInputStream();
-				File file = new File(android.os.Environment.getExternalStorageDirectory()+"/Download/01.mp3");
-				//if(!file.exists()) file.createNewFile();
+				File file = new File(android.os.Environment.getExternalStorageDirectory()+"/Download/test.html");
 				FileOutputStream fos = new FileOutputStream(file);
 				byte[] data = new byte[1024];
 				int totalSize = 0,getPerSize = 0;
