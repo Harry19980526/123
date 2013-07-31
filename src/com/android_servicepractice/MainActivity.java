@@ -8,9 +8,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.*;
 
+@SuppressWarnings("unused")
 public class MainActivity extends Activity implements OnClickListener {
 	
 	private Button download_button;
+	
 	private TextView messageView;
 	private Intent it;
 	private DownloadService download;
@@ -33,7 +35,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		// TODO 自動產生的方法 Stub
 		it = new Intent(MainActivity.this,DownloadService.class);
 		startService(it);
-		stopService(it);
+		//stopService(it);
 	}
 
 }
